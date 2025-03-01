@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yeezy season approaching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: none;
+        }
+
+body {
+    /* messed up here */
+    linear-gradient(45deg, #090909 0%, #1a1a1a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+   }
+
+
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 5px solid #ee6bff;
+            animation: spin 0.7s linear infinite;
+            box-shadow: 0 0 30px rgba(238, 107, 255, 0.3);
+        }
+     #bgVideo {
+       position: fixed;
+       top: 0;
+       left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(76, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, rgba(255, 0, 221, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, #090909 0%, #1a1a1a 100%);
+            filter: blur(7px);
+            z-index: -1;
+            animation: backgroundAnimation 20s ease infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 25px;
+            height: 25px;
+            background: rgba(238, 107, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.2s ease;
+            box-shadow: 0 0 20px rgba(238, 107, 255, 0.3);
+        }
+
+        .landing {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .enter-button {
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .enter-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(238, 107, 255, 0.2),
+                0 0 0 2px rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            display: none;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 4rem;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                inset 0 0 32px rgba(255, 255, 255, 0.02);
+            max-width: 900px;
+            width: 95%;
+            margin: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .lanyard {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 196px;
+            height: 196px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 0 30px rgba(238, 107, 255, 0.2),
+                0 0 60px rgba(238, 107, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05) rotate(5deg);
+            border-color: rgba(238, 107, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 1.5rem 0;
+            background: linear-gradient(45deg, #ee6bff, #812cb3, #4a1d66);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(238, 107, 255, 0.3);
+            letter-spacing: 2px;
+        }
+
+        #bio {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.2rem 2rem;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 
+                0 8px 25px rgba(238, 107, 255, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: white;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            #bio {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                padding: 0.8rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="custom-cursor"></div>
+
+    <div class="landing">
+        <button class="enter-button">[ click me ]</button>
+    </div>
+
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div class="custom-cursor"></div>
+
+    <div class="landing">
+        <button class="enter-button">[ click me ]</button>
+    </div>
+
+    <div class="container">
+        <div class="profile-container">
+            <div class="lanyard"></div>
+            <img src="me.png" alt="pfp" class="profile-pic">
+        </div>
+        <h1>matthew</h1>
+        <p id="bio"></p>
+
+        </div>
+        <h1>matthew</h1>
+        <p id="bio"></p>
+        <div class="social-links">
+            <a href="https://t.me/matthevreal" class="social-link">
+                <i class="fab fa-telegram"></i>
+                Telegram
+            </a>
+            <a href="https://discord.com/users/1337337459184500766" class="social-link">
+                <i class="fab fa-discord"></i>
+                Discord
+            </a>
+            <a href="https://github.com/matthevreal" class="social-link">
+                <i class="fab fa-github"></i>
+                Github
+            </a>
+            <a href="https://github.com/matthevreal" class="social-link">
+                <i class="fa-solid fa-wrench"></i>
+                Tools
+            </a>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader-wrapper').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 500);
+            }, 120);
+        });
+
+        const bioTexts = ["i miss the old kanye 💔", " sanity is overrated ", "so silly", "i love html css js python and c++!"];
+        let index = 0;
+        let textIndex = 0;
+        let deleting = false;
+        const bioElement = document.getElementById("bio");
+        const audio = document.getElementById('bgMusic');
+        const landing = document.querySelector('.landing');
+        const container = document.querySelector('.container');
+        const title = document.querySelector('h1');
+        const cursor = document.querySelector('.custom-cursor');
+        const lanyardElement = document.querySelector('.lanyard');
+
+        const userId = '1337337459184500766';
+
+        async function fetchDiscordStatus() {
+            try {
+                const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+                const data = await response.json();
+                const { data: { discord_status, activities } } = data;
+
+                if (discord_status === 'online') {
+                    lanyardElement.style.borderColor = '#168431';
+                } else if (discord_status === 'idle') {
+                    lanyardElement.style.borderColor = '#FAA61A';
+                } else if (discord_status === 'dnd') {
+                    lanyardElement.style.borderColor = '#F04747';
+                } else {
+                    lanyardElement.style.borderColor = '#9e0000';
+                }
+            } catch (error) {
+                console.error('Error fetching Discord status:', error);
+            }
+        }
+
+        fetchDiscordStatus();
+        setInterval(fetchDiscordStatus, 30000);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        function typeWriter() {
+            const bioText = bioTexts[textIndex];
+
+            if (!deleting && index < bioText.length) {
+                bioElement.innerHTML = bioText.substring(0, index + 1) + '<span class="cursor"></span>';
+                index++;
+                setTimeout(typeWriter, 100);
+            } else if (deleting && index > 0) {
+                bioElement.innerHTML = bioText.substring(0, index - 1) + '<span class="cursor"></span>';
+                index--;
+                setTimeout(typeWriter, 100);
+            } else {
+                if (!deleting) {
+                    setTimeout(() => deleting = true, 1000);
+                } else {
+                    deleting = false;
+                    textIndex = (textIndex + 1) % bioTexts.length;
+                }
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        document.querySelector('.enter-button').addEventListener('click', () => {
+            audio.play();
+            landing.style.opacity = '0';
+            setTimeout(() => {
+                landing.style.display = 'none';
+                container.style.display = 'block';
+                typeWriter();
+            }, 500);
+        });
+
+        audio.volume = 0;
+        function fadeIn() {
+            if (audio.volume < 0.2) {
+                audio.volume += 0.001;
+                setTimeout(fadeIn, 50);
+            }
+        }
+
+        audio.addEventListener('play', fadeIn);
+
+        container.addEventListener('transitionend', function() {
+            this.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
