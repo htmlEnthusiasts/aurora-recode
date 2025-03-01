@@ -1,4 +1,4 @@
-# aurora | A Simple CSS/JS/HTML Bio  
+# aurora | biolink for skids
 
 ### Notes:  
 - Edit your button redirects.  
@@ -17,4 +17,3 @@ Available at `/old`.
 ## Credits  
 Giving credit would be nice, but it's optional. 
 
-note to myself: fix bgs you stupid
